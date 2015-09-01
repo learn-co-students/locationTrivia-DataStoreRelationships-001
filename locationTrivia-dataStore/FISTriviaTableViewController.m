@@ -31,6 +31,9 @@
 
     self.view.accessibilityIdentifier=@"Trivia Table";
     self.view.accessibilityLabel=@"Trivia Table";
+    self.addTrivia.accessibilityIdentifier=@"Add Trivia Button";
+    self.addTrivia.accessibilityLabel = @"Add Trivia Button";
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,14 +59,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.trivia count];
+    return [self.location.trivia count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
 
-    FISTrivia *trivia = self.trivia[indexPath.row];
+    FISTrivia *trivia = self.location.trivia[indexPath.row];
     cell.textLabel.text = trivia.content;
 
 
@@ -119,5 +122,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)addTriviaButton:(id)sender {
+    
+    [self performSegueWithIdentifier:@"addTrivia" sender:self];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"addTrivia"]) {
+        
+        FISAddTriviaViewController *addTriviaVC = segue.destinationViewController;
+        addTriviaVC.location = self.location;
+        
+    }
+}
 
 @end

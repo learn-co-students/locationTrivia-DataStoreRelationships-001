@@ -28,8 +28,9 @@
 {
     [super viewDidLoad];
 
-    self.view.accessibilityIdentifier=@"Locations Table";
-    self.view.accessibilityLabel=@"Locations Table";
+    self.view.accessibilityIdentifier= @"Locations Table";
+    self.view.accessibilityLabel= @"Locations Table";
+    
     self.store = [FISLocationsDataStore sharedLocationsDataStore];
     FISLocation *location1 = [[FISLocation alloc] initWithName:@"The Empire State Building"
                                                       Latitude:@40.7484
@@ -159,7 +160,7 @@
         
         FISTriviaTableViewController *triviaVC = segue.destinationViewController;
         
-        triviaVC.trivia = location.trivia;
+        triviaVC.location = location;
     }
     
 

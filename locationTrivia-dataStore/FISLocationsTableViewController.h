@@ -11,4 +11,6 @@
 
 @interface FISLocationsTableViewController : UITableViewController
 @property (strong, nonatomic) FISLocationsDataStore *store;
+
+
 @end
