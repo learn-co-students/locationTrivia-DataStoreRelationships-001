@@ -18,7 +18,7 @@
 
 SpecBegin(locationTriviaDataStore)
 
-describe(@"locationTriviaDataStore", ^{
+ describe(@"locationTriviaDataStore", ^{
     
     __block NSMutableArray *locations = [FISLocationsDataStore sharedLocationsDataStore].locations;
     

@@ -49,11 +49,11 @@
     NSNumber *longitude = [NSNumber numberWithInteger:[self.longitudeField.text integerValue]];
     FISLocation *newLocation = [[FISLocation alloc] initWithName:self.nameField.text Latitude:latitude Longitude:longitude];
     [[FISLocationsDataStore sharedLocationsDataStore].locations addObject:newLocation];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end
