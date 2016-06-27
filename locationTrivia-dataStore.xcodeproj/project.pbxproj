@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		36EC021D1D2187030036B996 /* FISLocationsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC021C1D2187030036B996 /* FISLocationsDataStore.m */; };
+		36EC021F1D2189350036B996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EC021E1D2189350036B996 /* Main.storyboard */; };
+		36EC02221D218A150036B996 /* FISLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EC02211D218A150036B996 /* FISLocationsTableViewController.m */; };
 		43DBB46D1AC33DD3001CCBCC /* locationTrivia-dataStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB46C1AC33DD3001CCBCC /* locationTrivia-dataStoreSpec.m */; };
 		4D5549411BCC88F0001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5549401BCC88F0001E3D77 /* Launch Screen.storyboard */; };
 		4D5549441BCC8D69001E3D77 /* FISTrivium.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549431BCC8D69001E3D77 /* FISTrivium.m */; };
@@ -45,6 +47,9 @@
 		299344BF52AE996DC22173AC /* Pods-locationTrivia-dataStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locationTrivia-dataStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-locationTrivia-dataStoreTests/Pods-locationTrivia-dataStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		36EC021B1D2187030036B996 /* FISLocationsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsDataStore.h; sourceTree = "<group>"; };
 		36EC021C1D2187030036B996 /* FISLocationsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsDataStore.m; sourceTree = "<group>"; };
+		36EC021E1D2189350036B996 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		36EC02201D218A150036B996 /* FISLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsTableViewController.h; sourceTree = "<group>"; };
+		36EC02211D218A150036B996 /* FISLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsTableViewController.m; sourceTree = "<group>"; };
 		43DBB46C1AC33DD3001CCBCC /* locationTrivia-dataStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "locationTrivia-dataStoreSpec.m"; sourceTree = "<group>"; };
 		4D5549401BCC88F0001E3D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4D5549421BCC8D69001E3D77 /* FISTrivium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrivium.h; sourceTree = "<group>"; };
@@ -151,6 +156,9 @@
 				D80B85F91958A02C0042C042 /* Supporting Files */,
 				36EC021B1D2187030036B996 /* FISLocationsDataStore.h */,
 				36EC021C1D2187030036B996 /* FISLocationsDataStore.m */,
+				36EC021E1D2189350036B996 /* Main.storyboard */,
+				36EC02201D218A150036B996 /* FISLocationsTableViewController.h */,
+				36EC02211D218A150036B996 /* FISLocationsTableViewController.m */,
 			);
 			path = "locationTrivia-dataStore";
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 				D80B860B1958A02C0042C042 /* Images.xcassets in Resources */,
 				4D5549411BCC88F0001E3D77 /* Launch Screen.storyboard in Resources */,
 				D80B85FD1958A02C0042C042 /* InfoPlist.strings in Resources */,
+				36EC021F1D2189350036B996 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +337,7 @@
 				D80B86331958A0570042C042 /* FISLocation.m in Sources */,
 				D80B86031958A02C0042C042 /* FISAppDelegate.m in Sources */,
 				36EC021D1D2187030036B996 /* FISLocationsDataStore.m in Sources */,
+				36EC02221D218A150036B996 /* FISLocationsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

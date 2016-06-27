@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *locations;
 
--(instancetype)init;
+- (instancetype)init;
++ (instancetype)sharedLocationsDataStore;
 
 @end
