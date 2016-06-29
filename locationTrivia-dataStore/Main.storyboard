@@ -44,7 +44,13 @@
                             <outlet property="delegate" destination="50M-Vo-mP6" id="9tQ-hi-rYS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Pm7-Hl-Pmw"/>
+                    <navigationItem key="navigationItem" id="Pm7-Hl-Pmw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UbJ-K7-Dux">
+                            <connections>
+                                <segue destination="bum-C6-3F6" kind="presentation" id="D0F-5u-9js"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="dPh-vT-cpz" kind="show" identifier="locationTrivia" id="iiJ-ct-e1x"/>
                     </connections>

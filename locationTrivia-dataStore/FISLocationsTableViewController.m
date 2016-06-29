@@ -31,6 +31,8 @@
     
     self.tableView.accessibilityLabel = @"Locations Table";
     self.tableView.accessibilityIdentifier = @"Locations Table";
+    self.navigationItem.rightBarButtonItem.accessibilityLabel = @"addButton";
+    self.navigationItem.rightBarButtonItem.accessibilityIdentifier = @"addButton";
     
     self.store = [FISLocationsDataStore sharedLocationsDataStore];
 }
@@ -38,6 +40,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -113,8 +121,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    FISTriviaTableViewController *TTVC = [segue destinationViewController];
-    TTVC.location = self.location;
+    if ([segue.identifier isEqualToString:@"locationTrivia"]) {
+        FISTriviaTableViewController *TTVC = [segue destinationViewController];
+        TTVC.location = self.location;
+    }
     
 }
 
