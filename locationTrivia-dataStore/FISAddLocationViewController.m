@@ -19,7 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.nameField.accessibilityIdentifier = @"nameField";
+    self.nameField.accessibilityLabel = @"nameField";
+    self.latitudeField.accessibilityLabel = @"latitudeField";
+    self.latitudeField.accessibilityIdentifier = @"latitudeField";
+    self.longitudeField.accessibilityLabel = @"longitudeField";
+    self.longitudeField.accessibilityIdentifier = @"longitudeField";
     self.saveButton.accessibilityIdentifier = @"saveButton";
     self.saveButton.accessibilityLabel = @"saveButton";
     self.cancelButton.accessibilityIdentifier = @"cancelButton";
