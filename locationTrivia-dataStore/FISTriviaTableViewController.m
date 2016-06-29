@@ -1,24 +1,19 @@
 //
-//  FISLocationsTableViewController.m
+//  FISTriviaTableViewController.m
 //  locationTrivia-dataStore
 //
-//  Created by John Richardson on 6/27/16.
+//  Created by John Richardson on 6/29/16.
 //  Copyright © 2016 Joe Burgess. All rights reserved.
 //
 
-#import "FISLocationsTableViewController.h"
 #import "FISTriviaTableViewController.h"
-#import "FISLocationsDataStore.h"
-#import "FISLocation.h"
+#import "FISTrivium.h"
 
-@interface FISLocationsTableViewController ()
-
-@property (strong, nonatomic) FISLocationsDataStore *store;
-@property (nonatomic) FISLocation *location;
+@interface FISTriviaTableViewController ()
 
 @end
 
-@implementation FISLocationsTableViewController
+@implementation FISTriviaTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,10 +24,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.tableView.accessibilityLabel = @"Locations Table";
-    self.tableView.accessibilityIdentifier = @"Locations Table";
-    
-    self.store = [FISLocationsDataStore sharedLocationsDataStore];
+    self.tableView.accessibilityIdentifier = @"Trivia Table";
+    self.tableView.accessibilityLabel = @"Trivia Table";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,25 +40,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.store.locations count];
+    return [self.location.trivia count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *SimpleIdentifier = @"SimpleIdentifier";
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SimpleIdentifier];
+     NSString *SimpleIdentifier = @"SimpleIdentifier";
+     
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+     
+     if (cell == nil) {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SimpleIdentifier];
+     }
+     
+     FISTrivium *trivium = self.location.trivia[indexPath.row];
+     cell.textLabel.text = trivium.content;
+     
+     return cell;
     }
-    
-    FISLocation *currentLocation = self.store.locations[indexPath.row];
-    cell.textLabel.text = currentLocation.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lu", currentLocation.trivia.count];
 
-    return cell;
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -101,22 +94,14 @@
 }
 */
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.location = self.store.locations[indexPath.row];
-    [self performSegueWithIdentifier:@"locationTrivia" sender:self];
-}
-
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    FISTriviaTableViewController *TTVC = [segue destinationViewController];
-    TTVC.location = self.location;
-    
 }
-
+*/
 
 @end
