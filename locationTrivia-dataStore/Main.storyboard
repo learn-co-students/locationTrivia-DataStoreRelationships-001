@@ -52,7 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="dPh-vT-cpz" kind="show" identifier="locationTrivia" id="iiJ-ct-e1x"/>
+                        <segue destination="dPh-vT-cpz" kind="show" identifier="locationTrivia" id="8rZ-p5-usb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONg-S9-d1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,6 +139,56 @@
             </objects>
             <point key="canvasLocation" x="2193" y="1094"/>
         </scene>
+        <!--Add Trivia View Controller-->
+        <scene sceneID="isL-Ca-DlS">
+            <objects>
+                <viewController id="FgZ-lR-yIJ" customClass="FISAddTriviaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6go-8X-POy"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6B-6L-Reb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2g0-5L-LPK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-ea-PYN">
+                                <rect key="frame" x="235" y="189" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3za-IC-Kc6">
+                                <rect key="frame" x="189" y="324" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="FgZ-lR-yIJ" eventType="touchUpInside" id="fPi-du-Bfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXo-FS-bxA">
+                                <rect key="frame" x="338" y="324" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="FgZ-lR-yIJ" eventType="touchUpInside" id="cKX-bh-NBw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trivium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvd-j4-pb9">
+                                <rect key="frame" x="226" y="125" width="114" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="KXo-FS-bxA" id="fqn-S3-6UY"/>
+                        <outlet property="saveButton" destination="3za-IC-Kc6" id="fKV-Be-wZj"/>
+                        <outlet property="triviaField" destination="tPc-ea-PYN" id="xSj-DZ-ag8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5P-gl-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2867" y="1093"/>
+        </scene>
         <!--Trivia Table View Controller-->
         <scene sceneID="y6Z-J8-Cvj">
             <objects>
@@ -162,10 +212,19 @@
                             <outlet property="delegate" destination="dPh-vT-cpz" id="AR7-Ka-lTk"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gWv-KJ-aKY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iB2-vZ-Gse">
+                            <connections>
+                                <segue destination="FgZ-lR-yIJ" kind="presentation" identifier="addTrivia" id="c7h-ky-YMG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WV-PB-8Lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2572" y="415"/>
+            <point key="canvasLocation" x="2653" y="424"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hR1-YJ-fEo">
