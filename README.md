@@ -97,7 +97,7 @@ This next lab already has these steps set up for you. Take a moment to look over
 
 6. Use the iOS Simulator to test your add-location view controller. You may notice that the new location doesn't appear in the locations table view, even though the data has been added. How can you get the table view to reload itself?
 
-7. Create another view controller named `FISAddTriviaTableViewController` to be presented modally from the the trivia table view controller. It will need one text field, a cancel button, and a save button. Set their accessibility labels & identifiers to `@"Trivium Text Field"`, `@"Cancel Button"`, and `@"Save Button"` respectively.
+7. Create another view controller named `FISAddTriviaViewController` to be presented modally from the the trivia table view controller. It will need one text field, a cancel button, and a save button. Set their accessibility labels & identifiers to `@"Trivium Text Field"`, `@"Cancel Button"`, and `@"Save Button"` respectively.
   * When the cancel button is tapped, dismiss the view controller.
   * When the submit button is tapped, add use the text field to create a new `FISTrivium` object with zero likes. Add the this new trivium to the relevant `FISLocation` object that was passed to the `FISTriviaTableViewController`. Then dismiss the view controller.
 
@@ -145,3 +145,5 @@ This next lab already has these steps set up for you. Take a moment to look over
 Add functionality to get the users actual location. Beware that significant changes to `CLLocation` were made with iOS 8, so resources older than September 2014 might be incorrect.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/locationTrivia-DataStoreRelationships' title='Location Trivia - Data Store Relationships'>Location Trivia - Data Store Relationships</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/locationTrivia-DataStoreRelationships'>Location Trivia - Data Store Relationships</a> on Learn.co and start learning to code for free.</p>
