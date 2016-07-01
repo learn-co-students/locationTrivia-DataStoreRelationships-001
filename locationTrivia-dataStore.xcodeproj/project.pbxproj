@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		43DBB46D1AC33DD3001CCBCC /* locationTrivia-dataStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 43DBB46C1AC33DD3001CCBCC /* locationTrivia-dataStoreSpec.m */; };
-		4D5549411BCC88F0001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5549401BCC88F0001E3D77 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4D5549441BCC8D69001E3D77 /* FISTrivium.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549431BCC8D69001E3D77 /* FISTrivium.m */; settings = {ASSET_TAGS = (); }; };
-		4D5549471BCC8D87001E3D77 /* FISLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549451BCC8D87001E3D77 /* FISLocationSpec.m */; settings = {ASSET_TAGS = (); }; };
-		4D5549481BCC8D87001E3D77 /* FISTriviumSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549461BCC8D87001E3D77 /* FISTriviumSpec.m */; settings = {ASSET_TAGS = (); }; };
-		4D55494B1BCCA5F4001E3D77 /* FISAddLocationViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549491BCCA5F4001E3D77 /* FISAddLocationViewControllerSpec.m */; settings = {ASSET_TAGS = (); }; };
-		4D55494C1BCCA5F4001E3D77 /* FISLocationsTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D55494A1BCCA5F4001E3D77 /* FISLocationsTableViewControllerSpec.m */; settings = {ASSET_TAGS = (); }; };
+		4D5549411BCC88F0001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5549401BCC88F0001E3D77 /* Launch Screen.storyboard */; };
+		4D5549441BCC8D69001E3D77 /* FISTrivium.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549431BCC8D69001E3D77 /* FISTrivium.m */; };
+		4D5549471BCC8D87001E3D77 /* FISLocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549451BCC8D87001E3D77 /* FISLocationSpec.m */; };
+		4D5549481BCC8D87001E3D77 /* FISTriviumSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549461BCC8D87001E3D77 /* FISTriviumSpec.m */; };
+		4D55494B1BCCA5F4001E3D77 /* FISAddLocationViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549491BCCA5F4001E3D77 /* FISAddLocationViewControllerSpec.m */; };
+		4D55494C1BCCA5F4001E3D77 /* FISLocationsTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D55494A1BCCA5F4001E3D77 /* FISLocationsTableViewControllerSpec.m */; };
 		AF7753828B1C2A231761ECF0 /* libPods-locationTrivia-dataStoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212F7E7A9A7BE5F50EA130D1 /* libPods-locationTrivia-dataStoreTests.a */; };
 		D80B85F31958A02C0042C042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F21958A02C0042C042 /* Foundation.framework */; };
 		D80B85F51958A02C0042C042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F41958A02C0042C042 /* CoreGraphics.framework */; };
@@ -27,6 +27,10 @@
 		D80B86141958A02C0042C042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F61958A02C0042C042 /* UIKit.framework */; };
 		D80B861C1958A02C0042C042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D80B861A1958A02C0042C042 /* InfoPlist.strings */; };
 		D80B86331958A0570042C042 /* FISLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B862D1958A0570042C042 /* FISLocation.m */; };
+		D854FEBA1D26C11A005FF758 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D854FEB91D26C11A005FF758 /* Storyboard.storyboard */; };
+		D854FEBD1D26C193005FF758 /* FISLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FEBC1D26C193005FF758 /* FISLocationsTableViewController.m */; };
+		D854FEC01D26C4A4005FF758 /* FISLocationsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FEBF1D26C4A4005FF758 /* FISLocationsDataStore.m */; };
+		D854FEC31D26C859005FF758 /* FISAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D854FEC21D26C859005FF758 /* FISAddLocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,13 @@
 		D80B861B1958A02C0042C042 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D80B862C1958A0570042C042 /* FISLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocation.h; sourceTree = "<group>"; };
 		D80B862D1958A0570042C042 /* FISLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocation.m; sourceTree = "<group>"; };
+		D854FEB91D26C11A005FF758 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		D854FEBB1D26C193005FF758 /* FISLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsTableViewController.h; sourceTree = "<group>"; };
+		D854FEBC1D26C193005FF758 /* FISLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsTableViewController.m; sourceTree = "<group>"; };
+		D854FEBE1D26C4A4005FF758 /* FISLocationsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsDataStore.h; sourceTree = "<group>"; };
+		D854FEBF1D26C4A4005FF758 /* FISLocationsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsDataStore.m; sourceTree = "<group>"; };
+		D854FEC11D26C859005FF758 /* FISAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddLocationViewController.h; sourceTree = "<group>"; };
+		D854FEC21D26C859005FF758 /* FISAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddLocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +152,13 @@
 			children = (
 				D80B86011958A02C0042C042 /* FISAppDelegate.h */,
 				D80B86021958A02C0042C042 /* FISAppDelegate.m */,
+				D854FEB91D26C11A005FF758 /* Storyboard.storyboard */,
+				D854FEC11D26C859005FF758 /* FISAddLocationViewController.h */,
+				D854FEC21D26C859005FF758 /* FISAddLocationViewController.m */,
+				D854FEBE1D26C4A4005FF758 /* FISLocationsDataStore.h */,
+				D854FEBF1D26C4A4005FF758 /* FISLocationsDataStore.m */,
+				D854FEBB1D26C193005FF758 /* FISLocationsTableViewController.h */,
+				D854FEBC1D26C193005FF758 /* FISLocationsTableViewController.m */,
 				D80B862C1958A0570042C042 /* FISLocation.h */,
 				D80B862D1958A0570042C042 /* FISLocation.m */,
 				4D5549421BCC8D69001E3D77 /* FISTrivium.h */,
@@ -265,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D80B860B1958A02C0042C042 /* Images.xcassets in Resources */,
+				D854FEBA1D26C11A005FF758 /* Storyboard.storyboard in Resources */,
 				4D5549411BCC88F0001E3D77 /* Launch Screen.storyboard in Resources */,
 				D80B85FD1958A02C0042C042 /* InfoPlist.strings in Resources */,
 			);
@@ -318,6 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D854FEC31D26C859005FF758 /* FISAddLocationViewController.m in Sources */,
+				D854FEBD1D26C193005FF758 /* FISLocationsTableViewController.m in Sources */,
+				D854FEC01D26C4A4005FF758 /* FISLocationsDataStore.m in Sources */,
 				D80B85FF1958A02C0042C042 /* main.m in Sources */,
 				4D5549441BCC8D69001E3D77 /* FISTrivium.m in Sources */,
 				D80B86331958A0570042C042 /* FISLocation.m in Sources */,
