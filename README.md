@@ -1,13 +1,11 @@
-
-
 # Location Trivia - Data Store Relationships
 
 ## Goals
-
 1. Set up a shared data store using a singleton.
 2. Use a shared instance to pass information between a group of view controllers.
 
 ## Review
+*The following review should be read before proceeding to the instructions. The implementation of the code discussed in the review should be done once you begin the instructions.*
 
 From time to time, we may want one instance of a class (and whatever data it holds onto) to be accessed by many other objects in your program. This is very useful for organizing your application's data into one place--hence the designation in this case of "Data Store." One way to accomplish this is with a **shared instance** of that class. A shared instance is typically accessed by a class method which creates only one instance over the lifetime of the application. Any and all calls to that class method return the one instance already instantiated. You'll often hear this referred to as a "singleton." 
 
@@ -71,10 +69,9 @@ Now that we have our singleton class set up, we can access it from any view cont
 }
 ```
 
-This next lab already has these steps set up for you. Take a moment to look over the data store's files to see how they're laid out, then solve the lab by connecting a new view controller to the data store.
+Take a moment to look over the data store's files to see how they're laid out, then solve the lab by connecting a new view controller to the data store.
 
 ## Instructions
-
 1. The previously-used `FISLocation` and `FISTrivium` data models have been provided for you. Set up the `FISLocationsDataStore` class to be a singleton class. It should have one property, an `NSMutableArray` called `locations`. Override the default initializer to populate the `locations` array with the starting data provided at the end of this readme in the `generateStartingLocationsData` method.
 
 2. Create a storyboard named `Main.storyboard`. Add a table view controller embedded in a navigation controller which is the initial view controller. This first table view controller should be connected to a class called `FISLocationsTableViewController`.
@@ -87,19 +84,19 @@ This next lab already has these steps set up for you. Take a moment to look over
   * Use the `location` property's `trivia` array to load the table view. Each cell should display the `FISTrivium` object's "content" in the `textLabel`, and the number of "likes" in the `detailTextLabel`.
 
 4. Create a new view controller named `FISAddLocationViewController` that will be presented modally from the locations table view controller. 
-  * Add three text fields for the name, latitude, and longitude. Set their accessibility labels & identifiers to `@"nameField"`, `@"latitudeField`, and `@"longitudeField"` respectively.
+  * Add three text fields for the name, latitude, and longitude. Set their accessibility labels & identifiers to `@"nameField"`, `@"latitudeField"`, and `@"longitudeField"` respectively.
   * Add two buttons, one to "cancel" adding a location, and one to "save" a new location with the information entered in the text fields. Set their accessibility labels & identifiers to `@"cancelButton"` and `@"saveButton"` respectively.
   * When the "cancel" button is tapped, dismiss the view controller.
-  * When the "submit" button is tapped, use the information in the text fields to create new a instance of `FISLocation` and add it the the data store's `locations` array. Then dismiss the view controller.
+  * When the "save" button is tapped, use the information in the text fields to create new a instance of `FISLocation` and add it the data store's `locations` array. Then dismiss the view controller.
 
 5. To access this new view controller, add a bar button item to the navigation bar in the location table view's storyboard canvas. Set the style to "add" so it shows a `+` sign. In the `FISLocationsTableViewController`'s `viewDidLoad` method, set this new button's accessibility label & identifier to `@"addButton"`. You can access it as a property via `self.navigationItem.rightBarButtonItem` and set the string properties from there.
   * Create a modal segue between this add button and the `FISAddLocationViewController`. Now that you have two segues, you'll need to detect which segue has been activated in the `prepareForSegue:` method — only one of the destination view controllers has a `location` property that can be set.
 
 6. Use the iOS Simulator to test your add-location view controller. You may notice that the new location doesn't appear in the locations table view, even though the data has been added. How can you get the table view to reload itself?
 
-7. Create another view controller named `FISAddTriviaViewController` to be presented modally from the the trivia table view controller. It will need one text field, a cancel button, and a save button. Set their accessibility labels & identifiers to `@"Trivium TextField"`, `@"Cancel Button"`, and `@"Save Button"` respectively.
+7. Create another view controller named `FISAddTriviaViewController` to be presented modally from the trivia table view controller. It will need one text field, a cancel button, and a save button. Set their accessibility labels & identifiers to `@"Trivium TextField"`, `@"Cancel Button"`, and `@"Save Button"` respectively.
   * When the cancel button is tapped, dismiss the view controller.
-  * When the submit button is tapped, add use the text field to create a new `FISTrivium` object with zero likes. Add the this new trivium to the relevant `FISLocation` object that was passed to the `FISTriviaTableViewController`. Then dismiss the view controller.
+  * When the save button is tapped, add use the text field to create a new `FISTrivium` object with zero likes. Add the this new trivium to the relevant `FISLocation` object that was passed to the `FISTriviaTableViewController`. Then dismiss the view controller.
 
 8. To access this last view controller, add a bar button to the navigation bar in the trivia table view's storyboard canvas. Set the style to "add" so it shows a `+` sign. In the `FISTriviaTableViewController`'s `viewDidLoad` method, set this new button's accessibility label & identifier to `@"Add Trivia Button"`.  You can access this it as a property via `self.navigationItem.rightBarButtonItem` and set the string properties from there.
   * Create a modal segue between the add button and the `FISAddTriviaViewController`.
@@ -107,7 +104,6 @@ This next lab already has these steps set up for you. Take a moment to look over
 9. Use the iOS Simulator to test your add-trivia view controller. Does the new trivium show up in the `FISTriviaTableViewController`?
 
 #### Starting Data
-
 ```objc
 - (void)generateStartingLocationsData {
     FISLocation *empireState = [[FISLocation alloc] initWithName:@"The Empire State Building"
@@ -138,12 +134,10 @@ This next lab already has these steps set up for you. Take a moment to look over
     [ladyLiberty.trivia addObjectsFromArray:@[trivium3A]];
     
     [self.locations addObjectsFromArray:@[bowlingGreen, empireState, ladyLiberty]];
-}```
+}
+```
 
 ## Advanced
-
 Add functionality to get the users actual location. Beware that significant changes to `CLLocation` were made with iOS 8, so resources older than September 2014 might be incorrect.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/locationTrivia-DataStoreRelationships' title='Location Trivia - Data Store Relationships'>Location Trivia - Data Store Relationships</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/locationTrivia-DataStoreRelationships'>Location Trivia - Data Store Relationships</a> on Learn.co and start learning to code for free.</p>
